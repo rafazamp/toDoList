@@ -4,6 +4,7 @@ import { CardAdicionar } from './components/CardAdicionar'
 
 function App() {
 
+  const [listaTarefas, setListaTarefas] = useState([]) 
 
   return (
     <div className="App">
