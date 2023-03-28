@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { CardAdicionar } from "./components/CardAdicionar";
+import { ListItem } from "./components/ListItem";
 
 function App() {
   const [listaTarefas, setListaTarefas] = useState([]);
@@ -17,7 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      <CardAdicionar adicionarTarefa={adicionarTarefa}/>
+      <CardAdicionar adicionarTarefa={adicionarTarefa} />
+      {listaDeTarefas.map((tarefa) => (
+        <li key={tarefa.id}>{tarefa.texto}</li>
+      ))}
     </div>
   );
 }
