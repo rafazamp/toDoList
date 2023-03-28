@@ -8,19 +8,19 @@ function App() {
 
   const adicionarTarefa = (tarefa) => {
     const novaTarefa = {
-      id: listaDeTarefas.length + 1,
+      id: listaTarefas.length + 1,
       texto: tarefa,
       finalizado: false,
     };
 
-    setListaDeTarefas([...listaDeTarefas, novaTarefa]);
+    setListaTarefas([...listaTarefas, novaTarefa]);
   };
 
   return (
     <div className="App">
       <CardAdicionar adicionarTarefa={adicionarTarefa} />
-      {listaDeTarefas.map((tarefa) => (
-        <li key={tarefa.id}>{tarefa.texto}</li>
+      {listaTarefas.map((tarefa) => (
+        <ListItem tarefa={tarefa} removerTarefa={removerTarefa} />
       ))}
     </div>
   );

@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 export const CardAdicionar = () => {
-  const [tarefa, setTarefa] = useState("")
+  const [tarefa, setTarefa] = useState("");
 
   const adicionarTarefa = (event) => {
     event.preventDefault();
     if (tarefa == "") {
       alert("Digite uma tarefa válida");
     } else {
-      alert(tarefa);
-      setTarefa("");//Limpa o campo de input
+      adicionarTarefa(tarefa);
+      setTarefa(""); //Limpa o campo de input
       //Adicionar tarefa no array
     }
   };
@@ -26,4 +26,4 @@ export const CardAdicionar = () => {
       <button onClick={adicionarTarefa}>Adicionar Tarefa</button>
     </div>
   );
-}
+};
