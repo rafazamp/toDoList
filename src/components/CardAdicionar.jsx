@@ -9,6 +9,7 @@ export const CardAdicionar = () => {
       alert("Digite uma tarefa válida");
     } else {
       alert(tarefa);
+      setTarefa("");//Limpa o campo de input
       //Adicionar tarefa no array
     }
   };
